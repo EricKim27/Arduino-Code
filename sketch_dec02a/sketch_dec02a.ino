@@ -1,16 +1,28 @@
 const int sensorPin1 = 3;
 const int sensorPin2 = 2;
-const float height = 0.3;
+float height;
 double gravitationalAcceleration;
 unsigned long startTime;
 unsigned long endTime;
 unsigned long elapsedTime;
 bool sense = false;
-
 void setup() {
   pinMode(sensorPin1, INPUT);
   pinMode(sensorPin2, INPUT);  
   Serial.begin(9600);
+  Serial.println("Enter the Distance between the two sensors(in meters)");
+  while(Serial.available() == 0){
+
+  }
+  if(Serial.available() > 0){
+    height = Serial.parseFloat();
+    if(isnan(height)) {
+      Serial.println("Invalid input. Please enter a numeric value.");
+      while (Serial.available() > 0) Serial.read();  // Clear the input buffer
+      return;
+    }
+  }
+
   Serial.println("Waiting for sensor 1");
 }
 
