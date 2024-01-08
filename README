@@ -1,6 +1,6 @@
 This is a repository for storing my arduino codes that I've used for my school's experiments. 
 The codes uploaded here are mostly codes that utilizes Photo Interrupters.
 
-sketch_dec05a - This code requires two Photo Interrupters. It calculates the gravitational pull.
+sketch_dec05a - This code requires two Photo Interrupters. It calculates the gravitational acceleration.
 
 sketch_jan05a - This prints the data read from the Photo Interrupter.
